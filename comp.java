@@ -1,37 +1,22 @@
 import java.io.*;
 import java.util.*;
-class comp
+class composite
 {
-	public static void main(String arg[])
+	public static void main(String args[])
 	{
-		int a,b,c;
-		Scanner sv=new Scanner(System.in);
-		a=sv.nextInt();
-		b=sv.nextInt();
-		c=sv.nextInt();
-		if(a>b)
+		int a[]={16,18,27,16,23,21,19};
+		int c=0;
+		for(int i=0;i<7;i++)
 		{
-			if(a>c)
+			if(a[i]%2==0)
 			{
-				System.out.println("1st number is greater");
+				c++;
 			}
-			else
+			else if(a[i]%3==0)
 			{
-				System.out.println("3rd number is greater");
+				c++;
 			}
 		}
-		else
-		{
-			if(b>c)
-			{
-				System.out.println("2nd number is greater");
-			}
-			else
-			{
-				System.out.println("3rd number is greater");
-			}
-		}
+		System.out.println("compocite number:"+c);
 	}
 }
-			
-		
